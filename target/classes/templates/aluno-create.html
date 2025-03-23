@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+    <title>UEG - Desenvolvimento Web 2025: Aluno</title>
+</head>
+
+<body>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+    <h1>
+        Cadastro de Aluno
+    </h1>
+
+    <form action="/alunos/create" method="post">
+<h4
+        <label>Nome: </label>
+        <input type="text" name="nome">
+    </h4>
+
+    <h4
+        <label>Email</label>
+        <input type="text" name="email">
+</h4>  
+
+        <button>Salvar</button>
+    </form>
+</body>
+
+</html>
