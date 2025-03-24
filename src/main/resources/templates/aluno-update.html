@@ -7,6 +7,17 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
 
     <title>UEG - Desenvolvimento Web 2025: Aluno</title>
+
+    <style>
+        .card-image img {
+            width: 50%;
+            height: auto;
+            display: block;
+            margin-left: auto;
+            margin-right: 0;
+        }
+    </style>
+
 </head>
 
 <body>
@@ -14,6 +25,13 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 
     <h1>Atualização Cadastro de Aluno</h1>
+
+    <div class="card">
+        <div class="card-image">
+            <img src="/imagens/Atualizar.png" alt="Imagem do curso">
+            <span class="card-title">Desenvolvimento Web</span>
+        </div>
+    </div>
 
             <form action="/alunos/update" method="post">
                 <input type="hidden" name="id" th:value="${id}">
@@ -23,7 +41,7 @@
                 <label>Email</label>
                 <input type="text" name="email" th:value="${aluno.email}">
 
-                <button>Salvar</button>
+                <button class="waves-effect waves-light btn teal">Salvar</button>
             </form>
         </div>
     </div>

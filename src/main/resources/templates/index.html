@@ -1,42 +1,68 @@
 <!DOCTYPE html>
-<html>
+<html lang="pt">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>UEG - Desenvolvimento Web 2025</title>
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
 
 <body>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <nav>
+        <div class="nav-wrapper teal darken-2">
+            <a href="#" class="brand-logo">UEG</a>
+            <a href="#" data-target="mobile-menu" class="sidenav-trigger">
+                <i class="material-icons">menu</i>
+            </a>
+            <ul class="right hide-on-med-and-down">
+                <li><a href="/">Início</a></li>
+                <li><a href="/alunos">Alunos</a></li>
+            </ul>
+        </div>
+    </nav>
 
-    <h1>Início</h1>
-<h4>
-    <p>
-        <div class="card-panel teal lighten-2">Bem-vindo ao curso de Desenvolvimento Web!</div>
-        
-    </p>
-</h4>
-    
-<h4>
-    <div class="card-panel teal lighten-2">Cadastros</div>
-    
-</h4>
-    
-<h5
-    <ul>
-        <li><a href="/">Inicio</a></li>
+    <ul class="sidenav" id="mobile-menu">
+        <li><a href="/">Início</a></li>
         <li><a href="/alunos">Alunos</a></li>
     </ul>
-</h5>
+
+    <div class="container">
+        <h1>Início</h1>
+
+        <div class="card">
+            <div class="card-image">
+                <img src="/imagens/logo-UEG.png" alt="Imagem do curso">
+                <span class="card-title">Desenvolvimento Web</span>
+            </div>
+        </div>
+
+        <div class="card-panel teal lighten-2">
+            <h4>Bem-vindo ao curso de Desenvolvimento Web!</h4>
+        </div>
+
+        <div class="card-panel teal lighten-2">
+            <h4>Cadastros</h4>
+        </div>
+
+        <h5>Opções:</h5>
+        <ul class="collection">
+            <li class="collection-item"><a href="/">Início</a></li>
+            <li class="collection-item"><a href="/alunos">Alunos</a></li>
+        </ul>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 
     <script>
-        document.addEventListener('DOMContentLoaded', function() {
-          M.AutoInit();
-        });
-      </script>      
 
+        document.addEventListener('DOMContentLoaded', function() {
+            var elems = document.querySelectorAll('.sidenav');
+            M.Sidenav.init(elems);
+        });
+    </script>
 
 </body>
 </html>
