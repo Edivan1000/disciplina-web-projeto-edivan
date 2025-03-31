@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+    <title>UEG - Desenvolvimento Web 2025: Aluno</title>
+
+</head>
+
+<body>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+    <h1>Excluir Aluno</h1>
+    <p>
+        <strong>Tem certeza que deseja excluir o aluno?</strong>
+    </p>
+
+
+    <form action="/alunos/delete" method="post">
+        <input type="hidden" name="id" th:value="${id}">
+        <label>Nome: </label>
+        <input type="text" name="nome" th:value="${aluno.nome}" disabled>
+
+        <label>Email</label>
+        <input type="text" name="email" th:value="${aluno.email}" disabled>
+
+        <button class="waves-effect waves-light btn red">Excluir</button>
+    </form>
+</body>
+
+</html>
